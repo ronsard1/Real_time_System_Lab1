@@ -1,6 +1,6 @@
 # Real-Time Systems: Mini Projects (Unit 1)
 
-Python simulations and lab reports for the Unit 1 lab manual.
+Python simulations for the Unit 1 lab manual.
 
 | Project | Topic | Folder |
 |---|---|---|
@@ -29,12 +29,12 @@ python Mini_Project_1_3_Jitter_Analyzer/mini_project_1_3.py
 ```
 
 Each script writes its charts to a `figures/` folder next to it and its
-numeric results to a `results_1_x.pdf` table. 1.1 takes under a minute; 1.2
-about a minute; 1.3 roughly 1.5-2 minutes (it runs 18 periodic experiments).
+numeric results to a `results_1_x.pdf` table (both are git-ignored and are re-created on every run). 1.1 takes about a minute; 1.2
+a few seconds; 1.3 about 1-2 minutes (it runs 18 periodic experiments).
 Exact timing numbers depend on your machine and vary between runs, since
 they measure real wall-clock execution time.
 
-## Key results (from the included reports; will differ on your machine)
+## Key results (from one run; will differ on your machine)
 
 **1.1 Task timing** (T = 50 ms, D = 40 ms, 150 jobs)
 - Isolated execution time: mean ~16 ms, 95th percentile ~25 ms, measured max ~34 ms — a *measured, not proven* WCET.
@@ -60,24 +60,9 @@ Real_Time_Systems_Mini_Projects/
 ├── .gitignore
 ├── common/
 │   └── rts_common.py                 shared timing/jitter/statistics/PDF helpers
-├── Mini_Project_1_1_Task_Timing/
-│   ├── mini_project_1_1.py
-│   ├── figures/                      8 PNGs (timing diagrams, response/utility, sweeps)
-│   ├── results_1_1.pdf               numeric summary tables
-│   └── report_1_1.pdf / .docx        lab report with the 4 Lab Tasks
-├── Mini_Project_1_2_WCET_Tool/
-│   ├── mini_project_1_2.py
-│   ├── wcet_tool.py                  reusable measurement/statistics/margin harness
-│   ├── figures/                      5 PNGs (histograms + summary chart)
-│   ├── results_1_2.pdf
-│   └── report_1_2.pdf / .docx
-└── Mini_Project_1_3_Jitter_Analyzer/
-    ├── mini_project_1_3.py
-    ├── figures/                      5 PNGs (sweeps + jitter-vs-hit-rate)
-    ├── results_1_3.pdf
-    └── report_1_3.pdf / .docx
+├── Mini_Project_1_1_Task_Timing/     mini_project_1_1.py
+├── Mini_Project_1_2_WCET_Tool/       mini_project_1_2.py, wcet_tool.py
+└── Mini_Project_1_3_Jitter_Analyzer/ mini_project_1_3.py
 ```
 
-## Note on report length
-
-The lab manual asks for roughly a **one-page** written discussion for each mini project (Step 9 summary + Lab Tasks for 1.1; the discussion section for 1.2 and 1.3), separate from the code, tables and plots, which are already provided as their own files (`results_1_x.pdf`, `figures/`). Each project folder includes a `discussion_1_x.pdf`/`.docx` that is the one-page write-up matching that requirement. `report_1_x.pdf` is a longer, illustrated version combining the discussion with the figures and tables inline, kept as a reference. Submit `discussion_1_x.pdf` if your lecturer wants the exact page length; submit `report_1_x.pdf` as well if more detail and inline figures are welcome.
+The written report is submitted separately and is not part of this repository.
